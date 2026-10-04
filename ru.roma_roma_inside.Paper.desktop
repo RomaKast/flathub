@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=RomAromA Paper
+GenericName=Online whiteboard
+GenericName[ru]=Онлайн-доска
+Comment=Whiteboard and lessons with a tutor
+Comment[ru]=Доска и занятия с учителем
+Exec=rapaper-desktop %U
+Icon=ru.roma_roma_inside.Paper
+Terminal=false
+Categories=Education;
+Keywords=whiteboard;lesson;tutor;доска;занятие;урок;
+MimeType=x-scheme-handler/rapaper;
+StartupWMClass=RomAromA Paper
+StartupNotify=true

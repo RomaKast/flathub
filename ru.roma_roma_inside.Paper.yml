@@ -1,0 +1,48 @@
+id: ru.roma_roma_inside.Paper
+runtime: org.freedesktop.Platform
+runtime-version: '26.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: '26.08'
+command: rapaper-desktop
+separate-locales: false
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=x11
+  - --socket=pulseaudio
+  # камера для видеозвонка
+  - --device=all
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
+  # экспорт доски в PNG/JSON
+  - --filesystem=xdg-download
+modules:
+  - name: rapaper
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://roma-roma-inside.ru/paper-rad2318/download/RomAromA-Paper-1.1.2.deb
+        sha256: 6ddbacd246dbcb937b457e451cbe3667871e4aa9c5eed58052e9bdce82680350
+        dest-filename: rapaper.deb
+        only-arches:
+          - x86_64
+      - type: file
+        path: ru.roma_roma_inside.Paper.metainfo.xml
+      - type: file
+        path: ru.roma_roma_inside.Paper.desktop
+      - type: script
+        dest-filename: rapaper-desktop.sh
+        commands:
+          - exec zypak-wrapper /app/main/rapaper-desktop "$@"
+    build-commands:
+      - ar x rapaper.deb
+      - tar -xf data.tar.xz
+      - mv "opt/RomAromA Paper" /app/main
+      - rm -f /app/main/chrome-sandbox
+      # обновляет Flathub — своё автообновление выключено
+      - echo Flathub > /app/main/resources/store-managed
+      - install -Dm755 rapaper-desktop.sh /app/bin/rapaper-desktop
+      - install -Dm644 ru.roma_roma_inside.Paper.metainfo.xml -t /app/share/metainfo
+      - install -Dm644 ru.roma_roma_inside.Paper.desktop -t /app/share/applications
+      - for s in 16 24 32 48 64 128 256 512; do install -Dm644 usr/share/icons/hicolor/${s}x${s}/apps/rapaper-desktop.png /app/share/icons/hicolor/${s}x${s}/apps/ru.roma_roma_inside.Paper.png; done
