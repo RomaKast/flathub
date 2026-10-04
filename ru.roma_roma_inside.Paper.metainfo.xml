@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>ru.roma_roma_inside.Paper</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>RomAromA Paper</name>
+  <summary>Online whiteboard and lessons with a tutor</summary>
+  <summary xml:lang="ru">Онлайн-доска и занятия с учителем</summary>
+  <developer id="ru.roma_roma_inside">
+    <name>RomAromA</name>
+  </developer>
+  <description>
+    <p>RomAromA Paper is a shared whiteboard for lessons: a tutor and a student draw on one board, talk in a video call and chat, and keep homework in one place.</p>
+    <p xml:lang="ru">RomAromA Paper — общая доска для занятий: учитель и ученик рисуют на одной доске, говорят по видеосвязи, переписываются в чате и ведут домашние задания в одном месте.</p>
+    <p>The desktop app works like a professional editor: the board is in the center, and panels can be docked on any side or moved into separate windows.</p>
+    <p xml:lang="ru">ПК-приложение устроено как профессиональный редактор: доска в центре, панели можно пристыковать к любому краю или вынести в отдельные окна.</p>
+    <ul>
+      <li>Shared board with pages, shapes, graphs, tables, ruler and protractor</li>
+      <li xml:lang="ru">Общая доска с листами, фигурами, графиками, таблицами, линейкой и транспортиром</li>
+      <li>Video call and screen sharing during the lesson</li>
+      <li xml:lang="ru">Видеозвонок и показ экрана на занятии</li>
+      <li>Lesson chat, homework and an assistant</li>
+      <li xml:lang="ru">Чат занятия, домашние задания и помощник</li>
+      <li>Customizable toolbar in one or two columns</li>
+      <li xml:lang="ru">Настраиваемая панель инструментов в одну или две колонки</li>
+      <li>Several boards in tabs and windows</li>
+      <li xml:lang="ru">Несколько досок во вкладках и окнах</li>
+      <li>Lesson reminders in the background</li>
+      <li xml:lang="ru">Напоминания о занятиях в фоне</li>
+    </ul>
+    <p>An account at roma-roma.ru/paper is required. The interface is in Russian.</p>
+    <p xml:lang="ru">Нужен аккаунт на roma-roma.ru/paper.</p>
+  </description>
+  <launchable type="desktop-id">ru.roma_roma_inside.Paper.desktop</launchable>
+  <url type="homepage">https://roma-roma.ru/paper</url>
+  <url type="help">https://roma-roma-inside.ru/paper-rad2318/</url>
+  <categories>
+    <category>Education</category>
+  </categories>
+  <keywords>
+    <keyword>whiteboard</keyword>
+    <keyword>lesson</keyword>
+    <keyword>tutor</keyword>
+    <keyword xml:lang="ru">доска</keyword>
+    <keyword xml:lang="ru">занятие</keyword>
+    <keyword xml:lang="ru">репетитор</keyword>
+  </keywords>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Board in the center, tools on the left, parameters on the right</caption>
+      <image>https://roma-roma-inside.ru/paper-rad2318/store/screenshot-1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Customize the toolbar</caption>
+      <image>https://roma-roma-inside.ru/paper-rad2318/store/screenshot-2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Panels and layouts from the Window menu</caption>
+      <image>https://roma-roma-inside.ru/paper-rad2318/store/screenshot-3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Sign in with a code from the website</caption>
+      <image>https://roma-roma-inside.ru/paper-rad2318/store/screenshot-4.png</image>
+    </screenshot>
+  </screenshots>
+  <branding>
+    <color type="primary" scheme_preference="light">#8FDF29</color>
+    <color type="primary" scheme_preference="dark">#3A1B8A</color>
+  </branding>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+    <content_attribute id="social-contacts">intense</content_attribute>
+    <content_attribute id="social-info">mild</content_attribute>
+  </content_rating>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+  <requires>
+    <internet>always</internet>
+  </requires>
+  <releases>
+    <release version="1.1.2" date="2026-10-04">
+      <description>
+        <p>Packages for Flathub, Snap Store and AUR. Updates come from the store.</p>
+      </description>
+    </release>
+    <release version="1.1.1" date="2026-10-04">
+      <description>
+        <p>New app icon. Board menu, docking panels on all four sides, customizable toolbar.</p>
+      </description>
+    </release>
+    <release version="1.1.0" date="2026-10-04">
+      <description>
+        <p>Tabs and windows, background notifications, tray icon.</p>
+      </description>
+    </release>
+  </releases>
+</component>
